@@ -1,0 +1,24 @@
+config:
+  dockerfile: Dockerfile
+  project_name: BC
+
+services:
+  - postgresql
+  - redis
+
+steps:
+  analysis:
+    - bundle exec test1.py
+    - bundle exec test2.py
+  setup_db:
+    - bundle exec mysql db:create
+    - bundle exec mysql db:schema:load
+  test:
+    - bundle exec test3.py
+  
+
+
+environment:
+  JAVA_ENV: test
+  GIT_COMMITTER_NAME: a
+  GIT_COMMITTER_EMAIL: b
