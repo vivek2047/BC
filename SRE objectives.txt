@@ -1,0 +1,22 @@
+SRE part 
+
+1.Whats is the architecture - For minimum downtime have DR startegy , multi node set up for max performance 
+
+2.BAckup -- Backup the data -l0 every weekend , l1 every day 
+
+3.Monitor the setup - have warning and critical thresholds for FS space usage , memeory usage at server level 
+
+4.Application query performance can be improved if slow by indexing or execution plan set up 
+
+5.Upgrade the infrastructure for security and performance , downtime may be needed for this 
+
+6.Application connections are most difficult to predict since we dont know how the user is isuing the app 
+
+SLO/SLI 
+
+Use of monitoring tools like Prometheus greatly helps , have system level monitoring for Filesystem,memory usage , IO etc
+
+Have a service level aggrements with clients and user - based on severity divide the incidents into sev 1 , sev 2 and sev 3 with a timeframe against each to come to solution 
+
+Minimize the down time , it should be the main objective as a SRE team 
+
