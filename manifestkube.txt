@@ -1,0 +1,13 @@
+steps:
+- task: kubemanifest
+  displayName: Deploy
+  inputs:
+    kubernetesServiceConnection: k8service
+    namespace: BC
+    manifests: |
+      manifests/deployment.yml
+    containers: |
+      foo/demo
+    imagePullSecrets: |
+      secret
+      
